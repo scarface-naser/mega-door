@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- GitHub Pages لا يدعم إعادة توجيه SPA من السيرفر - هذا السكربت يقرأ المسار
+         المحفوظ من public/404.html (لما يفتح زائر رابط داخلي مباشرة مثل /model/md-105
+         أو يعمل تحديث للصفحة) ويستعيده عبر history API قبل ما يشتغل React Router. -->
+    <script>
+      (function () {
+        var redirect = sessionStorage.getItem("spa-redirect-path");
+        if (redirect) {
+          sessionStorage.removeItem("spa-redirect-path");
+          history.replaceState(null, "", redirect);
+        }
+      })();
+    </script>
+
+    <!-- عنوان ووصف افتراضيان (يتم تحديثهما ديناميكياً لكل صفحة عبر مكوّن SEO) -->
+    <title>ميكا للأبواب | أبواب داخلية وخارجية في بغداد والعراق</title>
+    <meta
+      name="description"
+      content="شركة ميكا للأبواب - كتالوج أبواب داخلية وخارجية بتصاميم متعددة في بغداد، العراق. السيدية مقابل سايلو الدورة. تواصل واتساب فوري 07751420001."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://mega1door.github.io/mega-door/" />
+
+    <!-- Warm the public storage/API origin used for site settings and hero images. -->
+    <link rel="preconnect" href="https://ecyxhlkkvjhensgymgdw.supabase.co" crossorigin />
+
+    <!-- أيقونات الموقع (مأخوذة من شعار الشركة) -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/mega-door/images/brand/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="64x64" href="/mega-door/images/brand/favicon-64.png" />
+    <link rel="apple-touch-icon" href="/mega-door/images/brand/mega-door-icon.png" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ميكا للأبواب" />
+    <meta property="og:locale" content="ar_IQ" />
+    <meta property="og:title" content="ميكا للأبواب | أبواب داخلية وخارجية في بغداد والعراق" />
+    <meta
+      property="og:description"
+      content="كتالوج إلكتروني لأبواب ميكا: داخلية وخارجية، بتصاميم وقياسات متعددة. تواصل مباشر عبر واتساب."
+    />
+    <meta property="og:url" content="https://mega1door.github.io/mega-door/" />
+    <meta property="og:image" content="https://mega1door.github.io/mega-door/images/brand/mega-door-logo.png" />
+
+    <!-- Keep the approved Arabic fonts, but let the page paint while Google Fonts loads. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Tajawal:wght@400;600;700&display=swap"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Tajawal:wght@400;600;700&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Tajawal:wght@400;600;700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+
+    <!-- Schema.org: بيانات الشركة (تُستخدم أيضاً بشكل ديناميكي لكل موديل عبر مكوّن SEO) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HomeAndConstructionBusiness",
+        "name": "ميكا للأبواب",
+        "logo": "https://mega1door.github.io/mega-door/images/brand/mega-door-logo.png",
+        "image": "https://mega1door.github.io/mega-door/images/brand/mega-door-logo.png",
+        "telephone": "+9647751420001",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "السيدية مقابل سايلو الدورة",
+          "addressLocality": "بغداد",
+          "addressCountry": "IQ"
+        },
+        "sameAs": ["https://www.instagram.com/mega_door", "https://www.facebook.com/share/1ccgPNjftp/"],
+        "priceRange": "$$"
+      }
+    </script>
+
+    <!-- Meta Pixel: يُفعَّل لاحقاً بعد إضافة رقم البكسل الحقيقي في src/lib/metaPixel.ts -->
+    <script type="module" crossorigin src="/mega-door/assets/index-DVIHq3rf.js"></script>
+    <link rel="stylesheet" crossorigin href="/mega-door/assets/index-DunseG9t.css">
+  </head>
+  <body class="bg-canvas text-ink font-body antialiased">
+    <div id="root"></div>
+  </body>
+</html>

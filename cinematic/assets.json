@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0",
+  "scene": "beyond-the-door",
+  "aspectRatio": "16:9",
+  "masterCanvas": {
+    "width": 1920,
+    "height": 1080
+  },
+  "layers": [
+    {
+      "id": "interiorBackground",
+      "role": "opaque-background",
+      "file": "images/cinematic/luxury-interior-living.jpg",
+      "width": 1920,
+      "height": 1080,
+      "anchor": "center",
+      "depth": 0.1,
+      "critical": true,
+      "description": "الفضاء المعماري الداخلي الفاخر المضاء بنور طبيعي والمكشوف عند انفتاح الباب"
+    },
+    {
+      "id": "doorSlabHero",
+      "role": "isolated-hero-object",
+      "file": "images/cinematic/door-slab-walnut.png",
+      "width": 348,
+      "height": 882,
+      "anchor": "center",
+      "transformOrigin": "calc(100% - 4px) 50%",
+      "depth": 0.7,
+      "critical": true,
+      "description": "درفة الباب المعماري الحقيقي لميكا من خشب الجوز المودرن مع المقبض وخطوط الألمنيوم"
+    },
+    {
+      "id": "doorSlabAlt",
+      "role": "isolated-hero-object-alt",
+      "file": "images/cinematic/door-slab-exterior.png",
+      "width": 620,
+      "height": 1202,
+      "anchor": "center",
+      "transformOrigin": "calc(100% - 4px) 50%",
+      "depth": 0.7,
+      "critical": false,
+      "description": "درفة بديلة لباب خارجي هندسي فاخر بنقوش معمارية مضلعة"
+    },
+    {
+      "id": "hardwareDetail",
+      "role": "craftsmanship-macro",
+      "file": "images/cinematic/40-hardware-detail.png",
+      "width": 1050,
+      "height": 1400,
+      "anchor": "center",
+      "depth": 0.85,
+      "critical": false,
+      "description": "لقطة مقربة للمقبض والمفصلات ونظام القفل الفاخر"
+    },
+    {
+      "id": "textureMacro",
+      "role": "craftsmanship-texture",
+      "file": "images/cinematic/41-texture-macro.png",
+      "width": 1050,
+      "height": 1400,
+      "anchor": "center",
+      "depth": 0.85,
+      "critical": false,
+      "description": "لقطة مقربة لخشب HDF عالي الكثافة وطبقات العزل الصوتي"
+    }
+  ]
+}
